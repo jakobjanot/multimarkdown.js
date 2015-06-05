@@ -1,6 +1,5 @@
 BUILDDIR=build
 MMDDIR=deps/multimarkdown-4
-EMCC=$(/usr/bin/which emcc)
 
 all: dist/multimarkdown.js
 
@@ -15,7 +14,7 @@ build/libmultimarkdown.js: $(MMDDIR)/parser.o
 	git submodule update --init --recursive
 	mkdir -pv build
 	# Set total memory to 256MB because large markdown documents will run into the default 16MB limit
-	$(EMCC) -O2 /src/$(MMDDIR)/*.c -o $@ -s EXPORTED_FUNCTIONS=\"['_mmd_version', '_markdown_to_string']\" -s OUTLINING_LIMIT=10000 -s TOTAL_MEMORY=268435456"
+	emcc -O2 $(MMDDIR)/*.c -o $@ -s EXPORTED_FUNCTIONS="['_mmd_version', '_markdown_to_string']" -s OUTLINING_LIMIT=10000 -s TOTAL_MEMORY=268435456
 
 dist/multimarkdown.js: src/*.js src/**/*.js build/libmultimarkdown.js
 	mkdir -pv dist
