@@ -2,3 +2,4 @@
  * multimarkdown.js
 */
 ;(function(){
+}
