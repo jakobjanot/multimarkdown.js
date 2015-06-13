@@ -1,6 +1,6 @@
 build
 dist
-deps/
+src/multimarkdown-4
 node_modules/
 .DS_Store
 lcov.info

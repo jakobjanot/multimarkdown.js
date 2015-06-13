@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="deps">
+        <df name="multimarkdown-4">
+          <df name="greg">
+            <in>compile.c</in>
+            <in>greg.c</in>
+            <in>greg.h</in>
+            <in>tree.c</in>
+          </df>
+          <in>GLibFacade.c</in>
+          <in>GLibFacade.h</in>
+          <in>beamer.c</in>
+          <in>beamer.h</in>
+          <in>critic.c</in>
+          <in>critic.h</in>
+          <in>glib.h</in>
+          <in>html.c</in>
+          <in>html.h</in>
+          <in>latex.c</in>
+          <in>latex.h</in>
+          <in>libMultiMarkdown.h</in>
+          <in>lyx.c</in>
+          <in>lyx.h</in>
+          <in>lyxbeamer.c</in>
+          <in>lyxbeamer.h</in>
+          <in>memoir.c</in>
+          <in>memoir.h</in>
+          <in>multimarkdown.c</in>
+          <in>odf.c</in>
+          <in>odf.h</in>
+          <in>opml.c</in>
+          <in>opml.h</in>
+          <in>parse_utilities.c</in>
+          <in>parser.c</in>
+          <in>parser.h</in>
+          <in>rng.c</in>
+          <in>rtf.c</in>
+          <in>rtf.h</in>
+          <in>strtok.c</in>
+          <in>strtok.h</in>
+          <in>text.c</in>
+          <in>text.h</in>
+          <in>toc.c</in>
+          <in>toc.h</in>
+          <in>transclude.c</in>
+          <in>transclude.h</in>
+          <in>writer.c</in>
+          <in>writer.h</in>
+        </df>
+      </df>
+      <df name="node_modules">
+        <df name="karma">
+          <df name="node_modules">
+            <df name="chokidar">
+              <df name="node_modules">
+                <df name="fsevents">
+                  <df name="node_modules">
+                    <df name="nan">
+                      <in>nan.h</in>
+                      <in>nan_implementation_12_inl.h</in>
+                      <in>nan_implementation_pre_12_inl.h</in>
+                      <in>nan_new.h</in>
+                      <in>nan_string_bytes.h</in>
+                    </df>
+                  </df>
+                  <df name="src">
+                    <in>async.cc</in>
+                    <in>constants.cc</in>
+                    <in>locking.cc</in>
+                    <in>methods.cc</in>
+                    <in>storage.cc</in>
+                    <in>thread.cc</in>
+                  </df>
+                  <in>fsevents.cc</in>
+                </df>
+              </df>
+            </df>
+            <df name="socket.io">
+              <df name="node_modules">
+                <df name="socket.io-client">
+                  <df name="node_modules">
+                    <df name="ws">
+                      <df name="node_modules">
+                        <df name="nan">
+                          <in>nan.h</in>
+                        </df>
+                      </df>
+                      <df name="src">
+                        <in>bufferutil.cc</in>
+                        <in>validation.cc</in>
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="karma-phantomjs-launcher">
+          <df name="node_modules">
+            <df name="phantomjs">
+              <df name="node_modules">
+                <df name="request">
+                  <df name="node_modules">
+                    <df name="node-uuid">
+                      <df name="benchmark">
+                        <in>benchmark-native.c</in>
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="src">
+        <in>multimarkdown.c</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>CLang|CLang</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+      </makefileType>
+      <item path="deps/multimarkdown-4/GLibFacade.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/GLibFacade.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/beamer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/beamer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/critic.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/critic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/glib.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/greg/compile.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/greg/greg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/greg/greg.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/greg/tree.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/html.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/html.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/latex.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/latex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/libMultiMarkdown.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/lyx.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/lyx.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/lyxbeamer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/lyxbeamer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/memoir.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/memoir.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/multimarkdown.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/odf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/odf.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/opml.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/opml.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/parse_utilities.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/parser.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/parser.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/rng.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/rtf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/rtf.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/strtok.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/strtok.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/text.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/text.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/toc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/toc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/transclude.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/transclude.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/writer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="deps/multimarkdown-4/writer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="node_modules/karma-phantomjs-launcher/node_modules/phantomjs/node_modules/request/node_modules/node-uuid/benchmark/benchmark-native.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/chokidar/node_modules/fsevents/fsevents.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/chokidar/node_modules/fsevents/node_modules/nan/nan.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/chokidar/node_modules/fsevents/node_modules/nan/nan_implementation_12_inl.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/chokidar/node_modules/fsevents/node_modules/nan/nan_implementation_pre_12_inl.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/chokidar/node_modules/fsevents/node_modules/nan/nan_new.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/chokidar/node_modules/fsevents/node_modules/nan/nan_string_bytes.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/chokidar/node_modules/fsevents/src/async.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/chokidar/node_modules/fsevents/src/constants.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/chokidar/node_modules/fsevents/src/locking.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/chokidar/node_modules/fsevents/src/methods.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/chokidar/node_modules/fsevents/src/storage.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/chokidar/node_modules/fsevents/src/thread.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws/node_modules/nan/nan.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws/src/bufferutil.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws/src/validation.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/multimarkdown.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

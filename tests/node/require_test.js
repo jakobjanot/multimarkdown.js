@@ -5,7 +5,7 @@ if (!multimarkdown) {
 	process.exit(1);
 }
 
-var r = new multimarkdown.Renderer(multimarkdown.RendererType.MULTIMARKDOWN, {});
+var r = new multimarkdown.Renderer();
 r.render("**bold**", function(html){
 	console.log("**bold** => " + html);
-})
+});
