@@ -5,8 +5,10 @@ SRCDIR=src
 
 all: dist/multimarkdown.js
 
-$(MMDDIR)/parser.o:
+$(MMDIR):
 	git submodule update --init --recursive
+
+$(MMDDIR)/parser.o: $(MMDIR)
 	make $(MMDDIR)
 
 dist/multimarkdown.js: $(MMDDIR)/parser.o
@@ -20,7 +22,7 @@ dist/multimarkdown.js: $(MMDDIR)/parser.o
 	# -s RESERVED_FUNCTION_POINTERS=20 -s OUTLINING_LIMIT=10000 -s TOTAL_MEMORY=268435456 \
 	# -o $@
 
-	$(CC) --memory-init-file 0 -O3 -Ideps/multimarkdown-4 $(SRCDIR)/multimarkdown.c \
+	$(CC) --memory-init-file 0 -O3 -Ideps/multimarkdown-4 $(SRCDIR)/multimarkdown.js.c \
 	-o $@ \
 	--closure 0 \
 	-s EXPORTED_FUNCTIONS="['_mmd_version', '_markdown_to_string']" \
