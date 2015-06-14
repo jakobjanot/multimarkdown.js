@@ -1,29 +1,37 @@
-BUILDDIR=build
+CC=emcc
+LD=emld
 MMDDIR=deps/multimarkdown-4
+SRCDIR=src
 
 all: dist/multimarkdown.js
 
-deps/multimarkdown-4:
-	git submodule update --init --recursive
-
 $(MMDDIR)/parser.o:
 	git submodule update --init --recursive
-	make -C $(MMDDIR)
+	make $(MMDDIR)
 
-build/libmultimarkdown.js: $(MMDDIR)/parser.o
-	git submodule update --init --recursive
-	mkdir -pv build
-	# Set total memory to 256MB because large markdown documents will run into the default 16MB limit
-	emcc -O2 $(filter-out $(MMDDIR)/strtok.c, $(wildcard $(MMDDIR)/*.c)) -o $@ -s EXPORTED_FUNCTIONS="['_mmd_version', '_markdown_to_string']" -s OUTLINING_LIMIT=10000 -s TOTAL_MEMORY=268435456
-
-dist/multimarkdown.js: src/*.js src/**/*.js build/libmultimarkdown.js
+dist/multimarkdown.js: $(MMDDIR)/parser.o
 	mkdir -pv dist
-	cat src/header.js \
-		build/libmultimarkdown.js \
-		src/multimarkdown.js \
-		src/footer.js \
-		| grep -v process.platform.match \
-		| sed -e 's/\.delete/["delete"]/g' > $@
+	# Set total memory to 256MB because large markdown documents will run into the default 16MB limit
+	#$(CC) -O2 -o $@ -s EXPORTED_FUNCTIONS="['_mmd_version', '_markdown_to_string']" -s OUTLINING_LIMIT=10000 -s TOTAL_MEMORY=268435456
+
+	# $(CC) --memory-init-file 0 -O3 -Ideps/multimarkdown-4 $(SRCDIR)/multimarkdown.c \
+	# -o $@ --pre-js $(SRCDIR)/pre.js --post-js $(SRCDIR)/post.js \
+	# -s EXPORTED_FUNCTIONS="['_mmd_version', '_markdown_to_string']" \
+	# -s RESERVED_FUNCTION_POINTERS=20 -s OUTLINING_LIMIT=10000 -s TOTAL_MEMORY=268435456 \
+	# -o $@
+
+	$(CC) --memory-init-file 0 -O3 -Ideps/multimarkdown-4 $(SRCDIR)/multimarkdown.c \
+	-o $@ \
+	--closure 0 \
+	-s EXPORTED_FUNCTIONS="['_mmd_version', '_markdown_to_string']" \
+	-s OUTLINING_LIMIT=10000 -s TOTAL_MEMORY=268435456 \
+	-o $@
+
+	# EMCC_DEBUG=0 $(CC) --memory-init-file 0 -O3 -Ideps/multimarkdown-4 $(SRCDIR)/multimarkdown.c \
+	# --pre-js $(SRCDIR)/pre.js --post-js $(SRCDIR)/post.js \
+	# -s EXPORTED_FUNCTIONS="['_mmd_version', '_markdown_to_string']" \
+	# -s RESERVED_FUNCTION_POINTERS=20 -s OUTLINING_LIMIT=10000 -s TOTAL_MEMORY=268435456 \
+	# --minify 0 -o $@
 
 test: nodetest
 
@@ -37,4 +45,4 @@ autotest:  dist/multimarkdown.js
 	./node_modules/karma/bin/karma start tests/karma/local.conf.js
 
 clean:
-	rm -rf build dist deps node_modules
+	rm -rf dist deps node_modules
