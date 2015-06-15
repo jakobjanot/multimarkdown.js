@@ -9,6 +9,7 @@ $(MMDIR):
 	git submodule update --init --recursive
 
 $(MMDDIR)/parser.o: $(MMDIR)
+	git submodule update --init --recursive
 	make $(MMDDIR)
 
 dist/multimarkdown.js: $(MMDDIR)/parser.o

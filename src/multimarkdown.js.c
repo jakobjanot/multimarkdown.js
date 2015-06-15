@@ -10,7 +10,7 @@ extern "C" {
 
 char *render(char *markdown)
 {
-  return markdown_to_string('string', 1, 1);
+  return markdown_to_string(markdown, 1, 1);
 }
 
 #ifdef __cplusplus
