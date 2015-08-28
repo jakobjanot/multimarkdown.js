@@ -13,6 +13,11 @@ char *render(char *markdown)
   return markdown_to_string(markdown, 1, 1);
 }
 
+char *version()
+{
+  return mmd_version();
+}
+
 #ifdef __cplusplus
 }
 #endif

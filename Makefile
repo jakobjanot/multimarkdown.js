@@ -25,6 +25,7 @@ dist/multimarkdown.js: $(MMDDIR)/parser.o
 
 	$(CC) --memory-init-file 0 -O3 -Ideps/multimarkdown-4 $(SRCDIR)/multimarkdown.js.c \
 	-o $@ \
+	--post-js $(SRCDIR)/post.js \
 	--closure 0 \
 	-s EXPORTED_FUNCTIONS="['_mmd_version', '_markdown_to_string']" \
 	-s OUTLINING_LIMIT=10000 -s TOTAL_MEMORY=268435456 \
