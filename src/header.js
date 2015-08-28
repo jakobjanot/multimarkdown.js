@@ -1,5 +1,0 @@
-/**
- * multimarkdown.js
-*/
-;(function(){
-}
